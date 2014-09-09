@@ -295,7 +295,10 @@ figure {
 }
 
 #searchform {
-	
+  margin: 16px 40px 0 0;
+  text-align: right;
+  font-family: "Open sans", sans-serif;
+  font-size: 0.8em;
 }
 /* ==========================================================================
    Forms
@@ -305,7 +308,7 @@ figure {
  */
 form {
   margin: 16px 40px 0 0;
-  text-align: right;
+  text-align: left;
   font-family: "Open sans", sans-serif;
   font-size: 0.8em;
 }
@@ -1067,8 +1070,7 @@ font-style: normal;
 .nav li.current-menu-item a,
 .nav li.current_page_item a,
 .nav li.current-page-ancestor a {
-  color: white;
-  background-color: #80C5FF;
+  color: black;
 }
 /* end .nav */
 /*********************
