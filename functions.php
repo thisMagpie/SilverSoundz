@@ -1,13 +1,25 @@
 <?php
-/*
-Author: Eddie Machado
-URL: htp://themble.com/bones/
+/**
+Author: Eddie Machado, Magdalen Berns
+URL: http://thismagpie.com
+/*/
 
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images, 
-sidebars, comments, ect.
-*/
+if ( ! isset( $content_width ) ) $content_width = 900;
 
+add_theme_support( 'automatic-feed-links' );
+
+add_theme_support( 'custom-header' );
+
+add_theme_support( 'menus');
+
+
+add_theme_support( 'html5', array( 'comment-list',
+                                   'comment-form',
+                                   'search-form',
+                                   'gallery',
+                                   'caption')
+                                 );
+                                 
 /************* INCLUDE NEEDED FILES ***************/
 
 /*
@@ -23,8 +35,9 @@ sidebars, comments, ect.
 	- custom google+ integration
 	- adding custom fields to user profiles
 */
-require_once('library/bones.php'); // if you remove this, bones will break
-/*
+
+/* TODO replace require_once with get_theme_template() */ 
+require_once('library/bones.php');//if you remove this, bones will break
 2. library/custom-post-type.php
     - an example custom post type
     - example custom taxonomy (like categories)
@@ -38,12 +51,12 @@ require_once('library/bones.php'); // if you remove this, bones will break
     - adding custom login css
     - changing text in footer of admin
 */
-// require_once('library/admin.php'); // this comes turned off by default
+require_once('library/admin.php'); // this comes turned off by default
 /*
 4. library/translation/translation.php
     - adding support for other languages
 */
-// require_once('library/translation/translation.php'); // this comes turned off by default
+require_once('library/translation/translation.php'); // this comes turned off by default
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
@@ -111,11 +124,18 @@ function bones_register_sidebars() {
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
-		
 // Comment Layout
 function bones_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?>>
+  <?php $format = get_post_format( $post_id ); 
+  if ( false === $format ) {
+	  $format = 'standard';
+  }
+  else {
+    $format = get_post_format();
+  }
+?>
 		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
 			<header class="comment-author vcard">
 			    <?php /*
@@ -144,16 +164,35 @@ function bones_comments($comment, $args, $depth) {
 } // don't remove this bracket!
 
 /************* SEARCH FORM LAYOUT *****************/
-
 // Search Form
 function bones_wpsearch($form) {
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <label class="screen-reader-text" for="s">' . __('Search for:', 'bonestheme') . '</label>
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...','bonestheme').'" />
+    <label class="screen-reader-text" for="s">' . __('', 'bonestheme') . '</label>
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('','bonestheme').'" />
     <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
     </form>';
     return $form;
 } // don't remove this bracket!
 
+// add ie conditional html5 shim to header
+function bones_add_ie_html5_shim () {
+    echo '<!--[if lt IE 9]>';
+    echo '<script src="'. get_template_directory_uri() .'/js/html5.js"></script>';
+    echo '<![endif]-->';
+}
+add_action('wp_head', 'bones_add_ie_html5_shim');
 
+
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+function custom_upload_mimes ( $existing_mimes=array() ) {
+
+	// add the file extension to the array
+
+	$existing_mimes['svg'] = 'mime/type';
+
+        // call the modified list of extensions
+
+	return $existing_mimes;
+}
 ?>
