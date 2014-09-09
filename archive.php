@@ -13,7 +13,7 @@
 					    
 					    <?php } elseif (is_tag()) { ?> 
 						    <h1 class="archive-title h2">
-							    <span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
+							    <span><?php /*posts tagged crap */_e("", "bonestheme"); ?></span> <?php single_tag_title(); ?>
 						    </h1>
 					    
 					    <?php } elseif (is_author()) { ?>
