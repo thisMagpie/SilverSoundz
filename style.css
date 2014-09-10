@@ -796,7 +796,7 @@ GENERAL STYLES
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.0em;
-  color: #565656;
+  color: #000000;
   background: #ffffff;
   font-weight: 400;
   min-height: 100%;
@@ -1088,7 +1088,7 @@ POSTS & CONTENT STYLES
 }
 /* end .hentry */
 .archive-title {
-    padding-top: 26px; float: right; padding-right: 36px;
+    padding-top: 2px; float: right; padding-right: 0;
 }
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1879,9 +1879,13 @@ you can add resource intensive styles.
     /* deep nesting */
   
   }
+  .widget ul li a, a:visited {
+	  color:#000;
+  }
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
+	color:#000;
   }
   /* links widget */
   /* meta widget */
