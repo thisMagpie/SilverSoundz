@@ -6,7 +6,7 @@
 			
 					<div id="main" class="eightcol first clearfix" role="main">
 				
-						<h1 class="archive-title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
+						<h1 class="archive-title"><?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -16,7 +16,7 @@
 							
 									<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							
-									<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+									<p class="meta"><?php _e("", "bonestheme"); ?> <time datetime="<?php /* echo the_time('Y-m-j'); */ ?>" pubdate><?php /* the_time('F jS, Y'); */ ?></time> <?php _e("", "bonestheme"); ?> <?php /* the_author_posts_link(); */ ?> <span class="amp"></span> <?php _e("", "bonestheme"); ?> <?php /* the_category(', '); */ ?></p>
 						
 								</header> <!-- end article header -->
 					
