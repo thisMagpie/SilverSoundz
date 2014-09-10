@@ -1,8 +1,12 @@
 <?php
-/**
+/*
 Author: Eddie Machado, Magdalen Berns
-URL: http://thismagpie.com
-/*/
+URL: htp://themble.com/bones/
+
+This is where you can drop your custom functions or
+just edit things like thumbnail sizes, header images, 
+sidebars, comments, ect.
+*/
 
 if ( ! isset( $content_width ) ) $content_width = 900;
 
@@ -35,10 +39,16 @@ add_theme_support( 'html5', array( 'comment-list',
 	- custom google+ integration
 	- adding custom fields to user profiles
 */
+<<<<<<< HEAD
 
 /* TODO replace require_once with get_theme_template() */ 
 require_once('library/bones.php');//if you remove this, bones will break
 /*2. library/custom-post-type.php
+=======
+require_once('library/bones.php'); // if you remove this, bones will break
+/*
+2. library/custom-post-type.php
+>>>>>>> 0aa84f7ee31572b0fe61c6cfea4d5d8ff3be8741
     - an example custom post type
     - example custom taxonomy (like categories)
     - example custom taxonomy (like tags)
@@ -164,6 +174,7 @@ function bones_comments($comment, $args, $depth) {
 } // don't remove this bracket!
 
 /************* SEARCH FORM LAYOUT *****************/
+
 // Search Form
 function bones_wpsearch($form) {
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
@@ -194,5 +205,7 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
         // call the modified list of extensions
 
 	return $existing_mimes;
+
 }
+
 ?>
