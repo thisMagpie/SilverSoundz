@@ -38,7 +38,7 @@ add_theme_support( 'html5', array( 'comment-list',
 
 /* TODO replace require_once with get_theme_template() */ 
 require_once('library/bones.php');//if you remove this, bones will break
-2. library/custom-post-type.php
+/*2. library/custom-post-type.php
     - an example custom post type
     - example custom taxonomy (like categories)
     - example custom taxonomy (like tags)
