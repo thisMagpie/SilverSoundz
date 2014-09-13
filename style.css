@@ -1915,7 +1915,7 @@ you can add resource intensive styles.
   
   }
   .widget ul li a, a:visited {
-	  color:#000;
+	  color: #08c;
   }
   .widget ul li ul {
     margin-top: 0.75em;
@@ -2127,6 +2127,8 @@ be set to display none.
 
 .single-title {
 	font-size: 2em;
+	font-family: "Open sans", sans-serif !important;
+	padding-bottom: 10px;
+	line-height: 1.2;
 }
-
 
