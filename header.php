@@ -47,11 +47,11 @@
 
         <div id="header-top" class="wrap clearfix"> 
             <div id="social-media">
-                <a href="https://www.facebook.com/SilverSoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook128.svg" alt="Facebook" class="social"/></a>
-                <a href="https://twitter.com/silversoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter128.svg" alt="Twitter" class="social" /></a>
-                <a href="https://soundcloud.com/silversoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/soundcloud128.svg" alt="Soundcloud" class="social" /></a>
-                <a href="http://silversoundz.tumblr.com"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tumblr128.svg" alt="Tumblr" class="social" /></a>
-                <a href="http://www.last.fm/user/SilverSoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/lastfm128.svg" alt="Tumblr" class="social" /></a>
+                <a href="https://www.facebook.com/SilverSoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/facebook48.png" alt="Facebook" class="social"/></a>
+                <a href="https://twitter.com/silversoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/twitter48.png" alt="Twitter" class="social" /></a>
+                <a href="https://soundcloud.com/silversoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/soundcloud48.png" alt="Soundcloud" class="social" /></a>
+                <a href="http://silversoundz.tumblr.com"><img src="<?php echo get_template_directory_uri(); ?>/library/images/tumblr48.png" alt="Tumblr" class="social" /></a>
+                <a href="http://www.last.fm/user/SilverSoundz"><img src="<?php echo get_template_directory_uri(); ?>/library/images/lastfm48.png" alt="Tumblr" class="social" /></a>
             </div> <!-- end social media -->
         </div> <!-- end header top --> 
             
