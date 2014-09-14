@@ -851,6 +851,26 @@ LAYOUT & GRID STYLES
   width: 96%;
   margin: 0 auto;
 }
+
+.logo-img {
+width: 100%;
+float: left;
+margin: 0;
+position: inherit;
+}
+    
+.social {
+display: inline-block;
+height: 36px;
+margin: 0 2px;
+line-height: 70px;
+font-family: Entypo;
+font-size: 35px;
+text-align: center;
+border-radius: 50%;
+overflow: hidden;
+transition: color .3s;
+}
 /*
 No Grid? Say Whaaaat?
 There's really no need for all that
@@ -1133,7 +1153,7 @@ POSTS & CONTENT STYLES
   font-family: "Open sans", sans-serif;
   font-size: 1.0em;
   line-height: 1.5;
-  margin: 10px 128px 0 62px;
+  margin: 1.0em 10em 0 4.2em;
 }
 /* general post style */
 /* general article on a page style */
@@ -1804,9 +1824,9 @@ you can add resource intensive styles.
   }
   .social {
   display: inline-block;
-  height:36px;
+  height: 1.0em;
   margin: 0 2px;
-  line-height: 70px;
+  line-height: 2em;
   font-family: Entypo;
   font-size: 35px;
   text-align: center;
@@ -1843,8 +1863,8 @@ you can add resource intensive styles.
   
   
     text-align: center;
-    padding: 0px 40px 0px 27px;
-    margin-bottom: 1px;
+    padding: 0 2em 0 2.0em;
+    margin-bottom: 0;
 }
   .nav li a {
     border-bottom: 0;
