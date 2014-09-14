@@ -1185,8 +1185,8 @@ POSTS & CONTENT STYLES
   margin-bottom: 1.5em;
 }
 .post-content img {
-  margin: 0 0 1.5em 0;
-  max-width: 100%;
+  margin: 0 0 0.5em 0;
+  width: 100%;
   height: auto;
 }
 .post-content video,
