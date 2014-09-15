@@ -848,7 +848,7 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -2151,4 +2151,5 @@ be set to display none.
 	padding-bottom: 10px;
 	line-height: 1.2;
 }
+
 
