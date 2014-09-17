@@ -1148,7 +1148,7 @@ POSTS & CONTENT STYLES
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 .post {
-  padding: 0 10px 0 0;
+  padding: 0;
   background-color: white;
   font-family: "Open sans", sans-serif;
   font-size: 1.0em;
@@ -1170,6 +1170,7 @@ POSTS & CONTENT STYLES
 }
 /* post content */
 .post-content {
+    min-width: 100%;
   /*
 			image alignment on a screen this size may be
 			a bit difficult. It's set to start aligning
@@ -1631,7 +1632,7 @@ tweeners.
   }
   .post-content .alignleft,
   .post-content img.alignleft {
-    margin-right: 1.5em;
+    margin-right: 1.9em;
     display: inline;
     float: left;
   }
@@ -2151,5 +2152,4 @@ be set to display none.
 	padding-bottom: 10px;
 	line-height: 1.2;
 }
-
 
